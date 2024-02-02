@@ -77,3 +77,15 @@ body {
   font-size: 1.8rem;
   vertical-align: middle;
 }
+
+.card-img-top {
+  height: 150px;
+}
+
+.card-body {
+  background: #0dcaf0;
+  color: white;
+}
+.card {
+  height: 350px;
+}
