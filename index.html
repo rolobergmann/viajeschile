@@ -58,14 +58,14 @@
               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Quienes Somos</a>
+              <a class="nav-link" href="#quienes">Quienes Somos</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link">Destacados</a>
+              <a class="nav-link" href="#destacados">Destacados</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Contacto</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
         </div>
@@ -117,7 +117,7 @@
     </div>
     <!--quienes somos-->
     <div class="container">
-      <section class="quienes">
+      <section id="quienes" class="d-none d-sm-block">
         <div class="display-6 pb-5 text-center">QUIENES SOMOS?</div>
         <div class="row">
           <div class="col-4">
@@ -175,7 +175,7 @@
         </div>
       </section>
       <!--Destacados-->
-      <section class="destacados">
+      <section id="destacados">
         <div class="display-6 p-5 text-center">DESTACADOS</div>
         <div class="row">
           <div
@@ -259,7 +259,7 @@
         </div>
       </section>
       <!--CONTACTO-->
-      <div class="display-6 pb-5 text-center">CONTACTO</div>
+      <div class="display-6 pb-5 text-center" id="contacto">CONTACTO</div>
 
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
@@ -288,7 +288,7 @@
       <button type="button" class="btn btn-info" id="toastbtn">Enviar</button>
     </div>
     <!-- Email Toast-->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 11">
       <div
         id="toastbtn"
         class="toast hide"
@@ -315,6 +315,14 @@
         <div class="toast-body">Mensaje enviado!</div>
       </div>
     </div>
+    <!--Backto top-->
+    <i
+      class="fa-solid fa-circle-up"
+      onclick="topFunction()"
+      id="myBtn"
+      title="Ir al inicio"
+    ></i>
+    <!--toast script-->
     <script>
       document.getElementById("toastbtn").onclick = function () {
         var toastElList = [].slice.call(document.querySelectorAll(".toast"));
@@ -324,7 +332,35 @@
         toastList.forEach((toast) => toast.show());
       };
     </script>
+    <!--back to top script-->
+    <script>
+      // Get the button:
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
   </body>
+  <!--Footer-->
   <footer>
     <div class="container row d-flex ms-auto">
       <div class="f-text col-6">VIAJES CHILE</div>
