@@ -82,10 +82,43 @@ body {
   height: 150px;
 }
 
-.card-body {
+.card-body,
+footer {
   background: #0dcaf0;
   color: white;
+  padding: 20px;
 }
 .card {
-  height: 350px;
+  height: 380px;
+}
+.btn-info {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.f-icon,
+.f-text {
+  font-size: 1.5rem;
+}
+#toast-img {
+  height: 20px;
+}
+
+.toast-body {
+  color: black;
+}
+
+.navbar .navbar-brand:hover {
+  color: #0dcaf0;
+}
+
+.nav-link:visited,
+.nav-link:link {
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  border-bottom: 2px solid #1bcfc6;
+  transform: translateY(-5px);
 }

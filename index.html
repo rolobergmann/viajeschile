@@ -151,8 +151,7 @@
               tenetur. Neque deleniti fugit aspernatur nulla recusandae
               cupiditate nisi earum, natus quo, accusantium inventore repellat
               obcaecati sit. Aut maxime eius reprehenderit aspernatur
-              consequatur expedita dolorum obcaecati porro sequi, cumque quidem
-              aperiam voluptate corrupti atque explicabo voluptatem?
+              consequatur expedita
             </p>
             <i class="qs-icon fa-solid fa-mountain"></i>
           </div>
@@ -176,7 +175,7 @@
         </div>
       </section>
       <!--Destacados-->
-      <section class="quienes">
+      <section class="destacados">
         <div class="display-6 p-5 text-center">DESTACADOS</div>
         <div class="row">
           <div
@@ -259,6 +258,82 @@
           </div>
         </div>
       </section>
+      <!--CONTACTO-->
+      <div class="display-6 pb-5 text-center">CONTACTO</div>
+
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          class="form-control"
+          type="text"
+          aria-label="default input example"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="asunto" class="form-label">Asunto</label>
+        <input
+          class="form-control"
+          type="text"
+          aria-label="default input example"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+      <button type="button" class="btn btn-info" id="toastbtn">Enviar</button>
     </div>
+    <!-- Email Toast-->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="toastbtn"
+        class="toast hide"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="./assets/img/viajes.svg"
+            class="rounded me-2"
+            id="toast-img"
+            alt="Chile Viajes"
+          />
+          <strong class="me-auto">Viajes Chile</strong>
+          <small>Justo ahora</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Mensaje enviado!</div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("toastbtn").onclick = function () {
+        var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+        var toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl);
+        });
+        toastList.forEach((toast) => toast.show());
+      };
+    </script>
   </body>
+  <footer>
+    <div class="container row d-flex ms-auto">
+      <div class="f-text col-6">VIAJES CHILE</div>
+      <div class="col-6">
+        <i class="f-icon fa-brands fa-square-github p-2"></i>
+        <i class="f-icon fa-brands fa-linkedin p-2"></i>
+        <i class="f-icon fa-brands fa-square-twitter p-2"></i>
+        <i class="f-icon fa-brands fa-square-facebook p-2"></i>
+      </div>
+    </div>
+  </footer>
 </html>
