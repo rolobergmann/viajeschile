@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100vh;
+  height: 100%;
   color: white;
   background: black;
   scroll-behavior: smooth;
@@ -80,17 +80,20 @@ body {
 }
 
 .card-img-top {
-  height: 150px;
+  max-height: 150px;
 }
-
+.card-body {
+  display: inline-block;
+}
 .card-body,
 footer {
   background: #0dcaf0;
   color: white;
-  padding: 20px;
+  padding: 10px;
 }
-.card {
-  height: 380px;
+
+.q-row {
+  height: auto;
 }
 .btn-info {
   color: white;
@@ -100,6 +103,10 @@ footer {
 .f-icon,
 .f-text {
   font-size: 1.5rem;
+}
+.f-icon:hover {
+  border-bottom: 2px solid white;
+  transform: translateY(-5px);
 }
 #toast-img {
   height: 20px;
@@ -127,8 +134,8 @@ footer {
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 5px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -142,4 +149,16 @@ footer {
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.top-buffer {
+  margin-top: 40px;
 }
