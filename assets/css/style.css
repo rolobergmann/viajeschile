@@ -162,3 +162,24 @@ footer {
 .top-buffer {
   margin-top: 40px;
 }
+
+/* Whatsapp */
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25d365;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1cb14e;
+}
+
+.whatsapp-button i.fa {
+  font-size: 20px;
+  margin-right: 5px;
+}
